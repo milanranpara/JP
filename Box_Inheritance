@@ -1,0 +1,54 @@
+class Box
+{
+	double width, height, depth;
+	
+	Box()
+	{
+		width=0.0;
+		height=0.0;
+		depth=0.0;
+	}
+	
+	Box(double w, double h, double d)
+	{
+		width=w;
+		height=h;
+		depth=d;
+	}
+		
+	double volume()
+	{
+		return width*height*depth;
+	}
+}
+
+class boxWeight extends Box
+{
+	double weight;
+	boxWeight(double w, double h, double d, double we)
+	{
+		width=w;
+		height=h;
+		depth=d;
+		weight=we;
+	}
+}
+
+class demo
+{
+	public static void main(String[] args)
+	{
+		Box box1=new Box();
+				
+		boxWeight box2=new boxWeight(2,4,5,6);
+		
+		double vol;
+		
+		vol=box1.volume();
+		System.out.println("Volume of mybox1 is: "+vol);
+		
+		vol=box2.volume();
+		System.out.println("Volume of mybox2 is: "+vol);
+		System.out.println("Weight of mybox2 is: "+box2.weight);
+	}
+}
