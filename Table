@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+class Table
+{
+    public static void main(String[] args)
+	{
+        Scanner num = new Scanner(System.in);
+        int n1 = 0;
+        int n2 = 0;
+        System.out.println("***************MULTIPLICATION TABLE***************");
+        while (n1 <= 0)
+		{
+            System.out.print("Enter First number: ");
+            n1 = num.nextInt();
+        }
+        while (n2 <= 0)
+		{
+            System.out.print("Enter Second number: ");
+            n2 = num.nextInt();
+        }
+
+        System.out.println("The First number is: " + n1);
+        System.out.println("The Second number is: " + n2);
+
+        for (int i = 1; i <= n1; i++)
+		{
+            for (int j = 1; j <= n2; j++)
+			{
+                // System.out.print((i * j) + " ");
+                int ans = i * j;
+                System.out.printf("% -5d", ans);
+            }
+            System.out.println();
+        }
+    }
+}
