@@ -1,0 +1,76 @@
+import java.lang.Math;
+import java.util.Scanner;
+
+class Coin
+{
+	public static void flip()
+	{
+		int HEADS = 0;
+		int TAILS = 1;
+		int face;
+		
+		System.out.print("FLIPPING!........");
+		face = (int)(Math.random() * 2);
+		
+		if (face==1)
+		{
+			System.out.println("\t IT'S TAIL!!!");
+		}
+		else
+		{
+			System.out.println("\t IT'S HEAD!!!");
+		}
+	}
+
+	public static void main(String args[])
+	{
+		System.out.println("LET'S PLAY A COIN TOSS GAME!");
+		
+		String player1, player2, player3;
+		int no;
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("ENTER PLAYER 1: ");
+		player1 = sc.nextLine();
+		
+		System.out.print("ENTER PLAYER 2: ");
+		player2 = sc.nextLine();
+		
+		System.out.print("ENTER PLAYER 3: ");
+		player3 = sc.nextLine();
+		
+		System.out.print("HOW MANY TOSSES: ");
+		no = sc.nextInt();
+		
+		for(int i=1; i<=no; i++)
+		{
+			flip();
+		}		
+		
+		/*
+		int face=(int)(Math.random() * 2);
+		System.out.println(face);
+		
+		int face1=(int)(Math.random() * 2);
+		System.out.println(face1);
+		
+		int face2=(int)(Math.random() * 2);
+		System.out.println(face2);
+		
+		int face3=(int)(Math.random() * 2);
+		System.out.println(face3);
+		
+		int face4=(int)(Math.random() * 2);
+		System.out.println(face4);
+		
+		double a = Math.random();
+		System.out.println(a);
+		double b = Math.random();
+		System.out.println(b);
+		double c = Math.random();
+		System.out.println(c);
+		double d = Math.random();
+		System.out.println(d);
+		*/
+	}
+}
